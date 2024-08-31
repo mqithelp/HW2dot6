@@ -11,13 +11,13 @@ public class HomeWork {
     }
 
     public static void getEvenNums(List<Integer> nums) {
-        Set<Integer> uniqueEven = new HashSet<>();;
+        Set<Integer> uniqueEven = new HashSet<>();
         Integer[] result;
         for (Integer num : nums) {
             if (num % 2 == 0) uniqueEven.add(num);
         }
 
-        result = uniqueEven.toArray(new Integer[uniqueEven.size()]);
+        result = uniqueEven.toArray(new Integer[0]);
         Arrays.sort(result);
         System.out.println("Четные числа: " + Arrays.toString(result));
     }
