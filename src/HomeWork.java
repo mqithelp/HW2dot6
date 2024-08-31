@@ -11,11 +11,15 @@ public class HomeWork {
     }
 
     public static void getEvenNums(List<Integer> nums) {
-        List<Integer> odds = new ArrayList<>();
+        Set<Integer> uniqueOdds = new HashSet<>();;
+        Integer[] result;
         for (Integer num : nums) {
-            if (num % 2 == 0) odds.add(num);
+            if (num % 2 == 0) uniqueOdds.add(num);
         }
-        System.out.println("Четные числа: " + odds);
+
+        result = uniqueOdds.toArray(new Integer[uniqueOdds.size()]);
+        Arrays.sort(result);
+        System.out.println("Четные числа: " + Arrays.toString(result));
     }
 
     public static void printCountDuplicateWords(List<String> strings) {
